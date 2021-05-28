@@ -3,8 +3,15 @@ let destination = ["Milwaukee", "Oshkosh", "Atlanta", "Chicago"]
 function randomDestination(anArrayOfDestinations){
    let tripDestination = anArrayOfDestinations[Math.floor(Math.random() * anArrayOfDestinations.length)];
     console.log(tripDestination);
-    return tripDestination;
 
+    let reSelectDestination = prompt("Would you like a new random destination?");
+if(reSelectDestination == "yes"){
+   randomDestination(destination);
+}
+else{
+    return;
+}
+ 
 
 }
 
@@ -22,7 +29,7 @@ function randomRestaurant(anArrayOfRestaurants){
 }
 
 let finalRestaurant = randomRestaurant(restaurant);
-
+ 
 
 
 let modeOfTransportation = ["Car", "Train", "Airplane"];
@@ -48,3 +55,4 @@ function randomFormOfEntertainment(anArrayOfFormsOfEntertainment){
 }
 
 let finalEntertainment = randomFormOfEntertainment(entertainment);
+
