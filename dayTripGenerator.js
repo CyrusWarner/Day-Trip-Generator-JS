@@ -10,6 +10,8 @@ function randomDestination(anArrayOfDestinations){
 
 let finalDestination = randomDestination(destination);
 
+
+
 let restaurant = ["Mcdonalds", "Chick-fill-A", "Arbys", "Chipotle"];
 
 function randomRestaurant(anArrayOfRestaurants){
@@ -20,3 +22,29 @@ function randomRestaurant(anArrayOfRestaurants){
 }
 
 let finalRestaurant = randomRestaurant(restaurant);
+
+
+
+let modeOfTransportation = ["Car", "Train", "Airplane"];
+
+function randomModeOfTransportation(anArrayOfMethodsOfTransportation){
+    let tripTransitionMethod = anArrayOfMethodsOfTransportation[Math.floor(Math.random() * anArrayOfMethodsOfTransportation.length)];
+    console.log(tripTransitionMethod);
+    return tripTransitionMethod;
+
+}
+
+let finalTransportationMethod = randomModeOfTransportation(modeOfTransportation);
+
+
+
+let entertainment = ["Movie", "Sports games", "Comedy performance"];
+
+function randomFormOfEntertainment(anArrayOfFormsOfEntertainment){
+    let TripEntertainment = anArrayOfFormsOfEntertainment[Math.floor(Math.random() * anArrayOfFormsOfEntertainment.length)];
+    console.log(TripEntertainment);
+    return TripEntertainment;
+
+}
+
+let finalEntertainment = randomFormOfEntertainment(entertainment);
