@@ -31,7 +31,7 @@ function randomRestaurant(anArrayOfRestaurants){
     let tripRestaurant = anArrayOfRestaurants[Math.floor(Math.random () * anArrayOfRestaurants.length)];
     console.log(tripRestaurant);
 
-    let reSelectRestaurant = prompt("Would you like a new random restaurant? if so type yes");
+    let reSelectRestaurant = prompt("Would you like a new random restaurant? if so type yes!");
     if(reSelectRestaurant == "yes"){
     return randomRestaurant(restaurant);
     }
@@ -47,13 +47,13 @@ finalRestaurant = randomRestaurant(restaurant);
  
 
 
-let modeOfTransportation = ["Car", "Bus", "Train", "Airplane"];
+let modeOfTransportation = ["car", "bus", "train", "airplane"];
 
 function randomModeOfTransportation(anArrayOfMethodsOfTransportation){
     let tripTransitionMethod = anArrayOfMethodsOfTransportation[Math.floor(Math.random() * anArrayOfMethodsOfTransportation.length)];
     console.log(tripTransitionMethod);
     
-    let reSelectTransportation = prompt("Would you like a new method of transportation? if so type yes")
+    let reSelectTransportation = prompt("Would you like a new method of transportation? if so type yes!")
     if(reSelectTransportation == "yes"){
         return randomModeOfTransportation(modeOfTransportation);
     }
@@ -67,13 +67,13 @@ finalTransportationMethod = randomModeOfTransportation(modeOfTransportation);
 
 
 
-let entertainment = ["Movie", "Sports games", "Comedy performance"];
+let entertainment = ["movie", "sport game", "comedy performance"];
 
 function randomFormOfEntertainment(anArrayOfFormsOfEntertainment){
     let TripEntertainment = anArrayOfFormsOfEntertainment[Math.floor(Math.random() * anArrayOfFormsOfEntertainment.length)];
     console.log(TripEntertainment);
 
-    let reSelectAFormOfEntertainment = prompt("Would you like a new form of entertainment? if so type yes");
+    let reSelectAFormOfEntertainment = prompt("Would you like a new form of entertainment? if so type yes!");
     if(reSelectAFormOfEntertainment == "yes"){
         return randomFormOfEntertainment(entertainment);
     }
@@ -85,4 +85,9 @@ function randomFormOfEntertainment(anArrayOfFormsOfEntertainment){
 }
 
 finalEntertainment = randomFormOfEntertainment(entertainment);
+
+let dayTripComplete = prompt("is your day trip complete? if so type yes!")
+if(dayTripComplete == "yes"){
+    console.log("I will be going to the city " + finalDestination + " and the restaurant " + finalRestaurant + " by " + finalTransportationMethod + " after I will be going to a " + finalEntertainment);
+}
 
