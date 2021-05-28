@@ -24,9 +24,19 @@ let restaurant = ["Mcdonalds", "Chick-fill-A", "Arbys", "Chipotle"];
 function randomRestaurant(anArrayOfRestaurants){
     let tripRestaurant = anArrayOfRestaurants[Math.floor(Math.random () * anArrayOfRestaurants.length)];
     console.log(tripRestaurant);
-    return tripRestaurant;
+
+    let reSelectRestaurant = prompt("Would you like a new random restaurant");
+if(reSelectRestaurant == "yes"){
+        randomRestaurant(restaurant);
+    }
+else{
+        return;
+}
+
 
 }
+
+    
 
 let finalRestaurant = randomRestaurant(restaurant);
  
