@@ -43,7 +43,7 @@ function randomRestaurant(anArrayOfRestaurants){
 }
 
     
-let finalRestaurant = randomRestaurant(restaurant);
+finalRestaurant = randomRestaurant(restaurant);
  
 
 
@@ -63,7 +63,7 @@ function randomModeOfTransportation(anArrayOfMethodsOfTransportation){
 
 }
 
-let finalTransportationMethod = randomModeOfTransportation(modeOfTransportation);
+finalTransportationMethod = randomModeOfTransportation(modeOfTransportation);
 
 
 
@@ -84,5 +84,5 @@ function randomFormOfEntertainment(anArrayOfFormsOfEntertainment){
 
 }
 
-let finalEntertainment = randomFormOfEntertainment(entertainment);
+finalEntertainment = randomFormOfEntertainment(entertainment);
 
