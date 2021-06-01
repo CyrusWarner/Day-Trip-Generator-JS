@@ -86,8 +86,6 @@ function randomFormOfEntertainment(anArrayOfFormsOfEntertainment){
 
 finalEntertainment = randomFormOfEntertainment(entertainment);
 
-let dayTripComplete = prompt("is your day trip complete? if so type yes!")
-if(dayTripComplete == "yes"){
-    console.log("I will be going to the city " + finalDestination + " and the restaurant " + finalRestaurant + " by " + finalTransportationMethod + " after I will be going to a " + finalEntertainment);
-}
+
+console.log("I will be going to the city " + finalDestination + " and the restaurant " + finalRestaurant + " by " + finalTransportationMethod + " after I will be going to a " + finalEntertainment);
 
