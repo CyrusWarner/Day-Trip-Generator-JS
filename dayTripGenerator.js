@@ -72,3 +72,4 @@ function chooseNew(){
 
 console.log("I will be going to the city " + finalDestination + " and the restaurant " + finalRestaurant + " by " + finalTransportationMethod + " after I will be going to a " + finalEntertainment +".");
 
+
