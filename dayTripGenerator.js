@@ -2,92 +2,73 @@ let finalDestination;
 let finalRestaurant;
 let finalTransportationMethod;
 let finalEntertainment;
+let dayTripComplete;
 
-
-let destination = ["Milwaukee", "Oshkosh", "Atlanta", "Chicago"]
-
-function randomDestination(anArrayOfDestinations){
-   let tripDestination = anArrayOfDestinations[Math.floor(Math.random() * anArrayOfDestinations.length)];
-    console.log(tripDestination);
-
-    let reSelectDestination = prompt("Would you like a new random destination? if so type yes!");
-    if(reSelectDestination == "yes"){
-    return randomDestination(destination);
-    }
-    else{
-        return tripDestination;
-    }
- 
-
-}
-
-finalDestination = randomDestination(destination);
-
-
-
+let destination = ["Milwaukee", "Oshkosh", "Atlanta", "Chicago"];
 let restaurant = ["Mcdonalds", "Chick-fill-A", "Arbys", "Chipotle"];
-
-function randomRestaurant(anArrayOfRestaurants){
-    let tripRestaurant = anArrayOfRestaurants[Math.floor(Math.random () * anArrayOfRestaurants.length)];
-    console.log(tripRestaurant);
-
-    let reSelectRestaurant = prompt("Would you like a new random restaurant? if so type yes!");
-    if(reSelectRestaurant == "yes"){
-    return randomRestaurant(restaurant);
-    }
-    else{
-        return tripRestaurant;
-}
-
-
-}
-
-    
-finalRestaurant = randomRestaurant(restaurant);
- 
-
-
 let modeOfTransportation = ["car", "bus", "train", "airplane"];
+let entertainment = ["movie", "sports game", "comedy performance"];
 
-function randomModeOfTransportation(anArrayOfMethodsOfTransportation){
-    let tripTransitionMethod = anArrayOfMethodsOfTransportation[Math.floor(Math.random() * anArrayOfMethodsOfTransportation.length)];
-    console.log(tripTransitionMethod);
-    
-    let reSelectTransportation = prompt("Would you like a new method of transportation? if so type yes!")
-    if(reSelectTransportation == "yes"){
-        return randomModeOfTransportation(modeOfTransportation);
-    }
-    else{
-        return tripTransitionMethod;
-    }
+let arrayOfOptions = ["Destination", "Restaurant", "Transportation", "Entertainment"]
 
+
+
+function generateRandom(anArray){
+    let allRandom = anArray[Math.floor(Math.random() * anArray.length)];
+    console.log(allRandom);
+    return allRandom;
 }
 
-finalTransportationMethod = randomModeOfTransportation(modeOfTransportation);
+finalDestination = generateRandom(destination);
+finalRestaurant = generateRandom(restaurant);
+finalTransportationMethod = generateRandom(modeOfTransportation);
+finalEntertainment = generateRandom(entertainment);
 
 
 
-let entertainment = ["movie", "sport game", "comedy performance"];
 
-function randomFormOfEntertainment(anArrayOfFormsOfEntertainment){
-    let TripEntertainment = anArrayOfFormsOfEntertainment[Math.floor(Math.random() * anArrayOfFormsOfEntertainment.length)];
-    console.log(TripEntertainment);
+console.log(`Your destination is ${finalDestination}. Your restaurant is ${finalRestaurant}. Your transportation method is ${finalTransportationMethod}. Your form of entertainment is ${finalEntertainment}.`)
 
-    let reSelectAFormOfEntertainment = prompt("Would you like a new form of entertainment? if so type yes!");
-    if(reSelectAFormOfEntertainment == "yes"){
-        return randomFormOfEntertainment(entertainment);
+chooseNew()
+
+
+function chooseNew(){
+    let dayTripComplete = prompt("is your day trip complete? type in yes or no!")
+    if(dayTripComplete.toLowerCase() == "yes"){
+        return;
     }
-    else{
-        return TripEntertainment;
-    }
-    
+    if(dayTripComplete.toLowerCase() == "no"){
+        increase = 1
+        for(let i = 0; i < arrayOfOptions.length; i++){
+            console.log(`${increase} ${arrayOfOptions[i]}`)
+            increase += 1
+        }
+        userInput = prompt("Please choose from the list of options")
+        if(userInput == 1){
+            finalDestination = generateRandom(destination);
+            console.log(`Your new destination is ${finalDestination}.`)
+            self.chooseNew()
+        }
+        if(userInput == 2){
+            finalRestaurant = generateRandom(restaurant);
+            console.log(`Your new restaurant is ${finalRestaurant}.`)
+            self.chooseNew()
 
+        }
+        if(userInput == 3){
+            finalTransportationMethod = generateRandom(modeOfTransportation);
+            console.log(`Your new transportation method is ${finalTransportationMethod}.`)
+            self.chooseNew()
+
+        }
+        if(userInput == 4){
+            finalEntertainment = generateRandom(entertainment);
+            console.log(`Your new entertainment is ${finalEntertainment}.`)
+            self.chooseNew()
+
+        }
+    }    
 }
 
-finalEntertainment = randomFormOfEntertainment(entertainment);
-
-let dayTripComplete = prompt("is your day trip complete? if so type yes!")
-if(dayTripComplete == "yes"){
-    console.log("I will be going to the city " + finalDestination + " and the restaurant " + finalRestaurant + " by " + finalTransportationMethod + " after I will be going to a " + finalEntertainment);
-}
+console.log("I will be going to the city " + finalDestination + " and the restaurant " + finalRestaurant + " by " + finalTransportationMethod + " after I will be going to a " + finalEntertainment +".");
 
